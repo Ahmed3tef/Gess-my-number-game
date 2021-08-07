@@ -1,16 +1,19 @@
 'use strict';
 
-let secretNumber = Math.trunc(Math.random() * 20 + 1);
-let scoreNumber = 20;
-let highscore = 0;
-
 const number = document.querySelector('.number');
 const body = document.querySelector('body');
 const score = document.querySelector('.score');
 
+let secretNumber = Math.trunc(Math.random() * 20 + 1);
+let scoreNumber = 20;
+let highscore = 0;
+
+
+
 const displayMessage = message => {
   document.querySelector('.message').textContent = message;
 };
+
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
